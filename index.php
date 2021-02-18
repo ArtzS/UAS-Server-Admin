@@ -24,6 +24,13 @@ if($result->num_rows > 0){
 }
 
 
+$sql = "SELECT COUNT(*) AS 'total' FROM users"
+$result = $conn->query($sql);
+
+$row = $result->fetch_assoc();
+
+echo "Total : " . $row["Total"] . " user(s)";
+
 $conn->close();
 
 ?>
